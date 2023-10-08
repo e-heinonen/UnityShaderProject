@@ -3,6 +3,7 @@ Shader "Custom/TestiMatShader"
     Properties
     {
         _Color("Color", Color) = (1, 1, 1, 1)
+        _InflateAmount("Inflate Amount", Range(-0.5, 1)) = 0
     }
     
     SubShader
@@ -24,7 +25,6 @@ Shader "Custom/TestiMatShader"
             
         HLSLPROGRAM
         
-        
         #pragma vertex Vert
         #pragma fragment Frag
 
@@ -33,7 +33,7 @@ Shader "Custom/TestiMatShader"
         struct Attributes
         {
             float3 positionOS : POSITION;
-            float3 normalOS : NORMAL;
+            float3 normal : NORMAL;
         };
 
         struct Varyings
@@ -44,14 +44,16 @@ Shader "Custom/TestiMatShader"
 
         CBUFFER_START(UnityPerMaterial)
         float4 _Color;
+        float _InflateAmount;
         CBUFFER_END
 
         Varyings Vert(const Attributes input)
         {
             Varyings output;
-
-            output.positionHCS = TransformObjectToHClip(input.positionOS);
-            output.positionWS = TransformObjectToWorld(input.positionOS);
+            const float3 vertex_pos = input.positionOS + input.normal * _InflateAmount;
+            
+            output.positionHCS = TransformObjectToHClip(vertex_pos);
+            output.positionWS = TransformObjectToWorld(vertex_pos);
 
             return output;
         }
