@@ -75,42 +75,45 @@ Shader "Custom/TextureShader"
         ENDHLSL
         }
 
-Pass
-{
-    Name "Depth"
-    Tags { "LightMode" = "DepthOnly" }
-    
-    Cull Back
-    ZTest LEqual
-    ZWrite On
-    ColorMask R
-    
-    HLSLPROGRAM
-    
-    #pragma vertex DepthVert
-    #pragma fragment DepthFrag
-     // PITÄÄ OLLA RELATIVE PATH TIEDOSTOON!!!
-     #include "Assets/DepthPass.hlsl"
-     ENDHLSL
-}
+        Pass
+        {
+            Name "Depth"
+            Tags
+            {
+                "LightMode" = "DepthOnly"
+            }
 
-Pass
-{
-    Name "Normals"
-    Tags { "LightMode" = "DepthNormalsOnly" }
-    
-    Cull Back
-    ZTest LEqual
-    ZWrite On
-    
-    HLSLPROGRAM
-    
-    #pragma vertex DepthNormalsVert
-    #pragma fragment DepthNormalsFrag
+            Cull Back
+            ZTest LEqual
+            ZWrite On
+            ColorMask R
 
-    #include "Assets/DepthNormalsPass.hlsl"
-    
-    ENDHLSL
-}
+            HLSLPROGRAM
+            #pragma vertex DepthVert
+            #pragma fragment DepthFrag
+            // PITÄÄ OLLA RELATIVE PATH TIEDOSTOON!!!
+            #include "Assets/DepthPass.hlsl"
+            ENDHLSL
+        }
+
+        Pass
+        {
+            Name "Normals"
+            Tags
+            {
+                "LightMode" = "DepthNormalsOnly"
+            }
+
+            Cull Back
+            ZTest LEqual
+            ZWrite On
+
+            HLSLPROGRAM
+            #pragma vertex DepthNormalsVert
+            #pragma fragment DepthNormalsFrag
+
+            #include "Assets/DepthNormalsPass.hlsl"
+            ENDHLSL
+        }
     }
 }

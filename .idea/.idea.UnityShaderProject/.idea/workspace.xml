@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bbce142d-843d-4d7c-afc4-cd0a9ab38e9b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityShaderProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityShaderProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/wet-mossy-rocks-unity/wet-mossy-rocks-unity/TextureShader.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/wet-mossy-rocks-unity/wet-mossy-rocks-unity/TextureShader.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,8 @@
       <workItem from="1696249607924" duration="99000" />
       <workItem from="1696254641836" duration="2921000" />
       <workItem from="1696786566895" duration="3754000" />
-      <workItem from="1697984506218" duration="3618000" />
+      <workItem from="1697984506218" duration="4061000" />
+      <workItem from="1698001782050" duration="3195000" />
     </task>
     <servers />
   </component>
