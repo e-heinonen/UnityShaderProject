@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbce142d-843d-4d7c-afc4-cd0a9ab38e9b" name="Changes" comment="" />
+    <list default="true" id="bbce142d-843d-4d7c-afc4-cd0a9ab38e9b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityShaderProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityShaderProject/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +92,7 @@
       <workItem from="1696249607924" duration="99000" />
       <workItem from="1696254641836" duration="2921000" />
       <workItem from="1696786566895" duration="3754000" />
+      <workItem from="1697984506218" duration="3618000" />
     </task>
     <servers />
   </component>
